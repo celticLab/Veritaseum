@@ -1,0 +1,10 @@
+
+Vaddr = "0xb6838aa676e66fa30d00de22f0ea5ec190e78d81";
+VeritaseumCoin.at(Vaddr)
+
+acc1 = "0xe6f7bc217a767a73f2a626181e71e5b8fb682e6d";acc2 = "0x2fb892270a6f106e84e87a79a939bee3fcc0deb8";
+
+web3.eth.sendTransaction({from:acc2, to:Vaddr, value: 100000000000000});
+
+
+getBalance(address)
