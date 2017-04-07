@@ -2,6 +2,7 @@ pragma solidity ^0.4.8;
 
 import 'zeppelin/token/StandardToken.sol';      // ERC20 Standard Token interface
 import 'zeppelin/ownership/Ownable.sol';        // set specific function for owner only
+import 'zeppelin/lifecycle/Killable.sol';       // kill feature for contract
 
 contract VeritaseumToken is Ownable, StandardToken {
 
