@@ -3,7 +3,7 @@ pragma solidity ^0.4.8;
 import 'zeppelin/token/CrowdsaleToken.sol';     // ERC20 interface
 import 'zeppelin/ownership/Ownable.sol';        // set specific function for owner only
 
-contract VeritaseumCoin is CrowdsaleToken, Ownable {
+contract VeritaseumToken is CrowdsaleToken, Ownable {
 
     string public name = "Veritaseum";
     string public symbol = "VERI";

@@ -1,6 +1,6 @@
-var VeritaseumCoin = artifacts.require("./VeritaseumCoin.sol");
+var VeritaseumToken = artifacts.require("./VeritaseumToken.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(VeritaseumCoin);
+  deployer.deploy(VeritaseumToken);
 
 };
