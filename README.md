@@ -1,4 +1,4 @@
-# Veritasium
+# Veritaseum
 The Veritaseum Crowd Sale Token
 
 The VeritaseumCoin is an ERC20 compliant Ethereum token, with added features to enable a Crowdsale Initial Coin Offer (ICO).
