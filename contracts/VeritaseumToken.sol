@@ -12,7 +12,7 @@ contract VeritaseumToken is Ownable, StandardToken {
 
     uint public startTime = 1493130600;         // 2017 April 25th 9:30 EST (14:30 UTC)
     uint public closeTime = startTime + 31 days;
-    uint public price = 50 ether;               // Each token has 18 decimal places, just like ether. 1 ETH = 50 tokens (^E18). 
+    uint public price = 30 ether;               // Each token has 18 decimal places, just like ether. 1 ETH = Ve 30 tokens (^E18). 
     uint public totalSupply = 100 ether;        // total supply of 100 Million Tokens
 
     function VeritaseumToken() {
