@@ -1,13 +1,13 @@
 # Veritaseum
 The Veritaseum Crowd Sale Token
 
-The VeritaseumCoin is an ERC20 compliant Ethereum token, with added features to enable a Crowdsale Initial Coin Offer (ICO).
+The VeritaseumToken is an ERC20 compliant Ethereum token, with added features to enable a Crowdsale Initial Coin Offer (ICO).
 The code-base makes use of Zeppelin and its standard templates, Safemath and other standard solidity best practices.
 
 Usage of the Veritaseum Token:
 
  - Simple send Ether to the Smart contract.
- - VeritaseumCoin will create and allocate new tokens to the address from which the Ether was send, according the the set and prevailing rate (as per the price global variable in the Smart Contract)
+ - VeritaseumToken will create and allocate new tokens to the address from which the Ether was send, according the the set and prevailing rate (as per the price global variable in the Smart Contract)
  - Use, sell or transfer your tokens on any compatible exchange such as [EtherDelta](https://etherdelta.github.io/)
 
 The token sale works on a sliding scale with the following rules:
