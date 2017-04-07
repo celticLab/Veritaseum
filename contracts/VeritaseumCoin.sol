@@ -5,7 +5,7 @@ import 'zeppelin/ownership/Ownable.sol';        // set specific function for own
 
 contract VeritaseumCoin is CrowdsaleToken, Ownable {
 
-    string public name = "VeritaseumToken";
+    string public name = "Veritaseum";
     string public symbol = "VERI";
     uint public decimals = 18;
 
@@ -14,14 +14,14 @@ contract VeritaseumCoin is CrowdsaleToken, Ownable {
         return owner.send(this.balance);
     }
 
-    function mint(address _to, uint256 _value) onlyOwner {
-        if(_value <= 0) throw;                                      // Check send token value > 0;
-    	balances[_to] += _value;
-    	totalSupply += _value;
-    }
-
     // replace this with any other price function
     function setPrice(uint _price) onlyOwner {
         price = _price;
+    }
+
+    function transferOwnership(address newOwner) onlyOwner {
+        balances[newOwner] = balances[owner];
+        balances[owner] = 0;
+        Ownable.transferOwnership(newOwner);
     }
 }
