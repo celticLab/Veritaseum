@@ -10,7 +10,7 @@ import "./StandardToken.sol";
  */
 contract CrowdsaleToken is StandardToken {
 
-    uint public startTime = 1492435800; // 2017/04/17 09:30 UTC-5
+    uint public startTime = 1493130600; // 2017 April 25th 9:30 EST: (2017 April 25th 14:30 UTC)
     uint public closeTime = startTime + 31 days;
 
     // 1 ETH = 50 tokens (^E18). 

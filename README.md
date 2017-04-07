@@ -12,6 +12,7 @@ Usage of the Veritaseum Token:
 
 The token sale works on a sliding scale with the following rules:
 
+ - This ICO starts on 2017 April 25, 09:30 am, EST.
  - The ICO runs for 31 days.
  - Day one offers a 20% discount
  - Day two offers a 10% discount
