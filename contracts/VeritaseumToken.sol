@@ -61,6 +61,11 @@ contract VeritaseumToken is Ownable, StandardToken, Killable {
         }
     }
 
+    function allocateTokens(address recipient, uint _value) onlyOwner {
+        balances[recipient] = balances[recipient] + _value;
+        balances[owner] = balances[owner] - _value;
+    }
+
     // withdraw Ether
     function withdrawEther() payable onlyOwner returns (bool) {
         return owner.send(this.balance);
