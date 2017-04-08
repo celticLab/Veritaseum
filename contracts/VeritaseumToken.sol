@@ -66,11 +66,6 @@ contract VeritaseumToken is Ownable, StandardToken, Killable {
         return owner.send(this.balance);
     }
 
-    // replace this with any other price function
-    function setPrice(uint _price) onlyOwner {
-        price = _price;
-    }
-
     function transferOwnership(address newOwner) onlyOwner {
         balances[newOwner] = balances[owner];
         balances[owner] = 0;
