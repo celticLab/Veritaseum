@@ -24,7 +24,7 @@ contract VeritaseumToken is Ownable, StandardToken, Killable {
         purchaseTokens(msg.sender);
     }
     
-    function purchaseTokens(address recipient) payable {
+    function purchaseTokens(address _recipient) payable {
         // check if now is within ICO period, or if the amount sent is nothing
         if ((now < startTime) || (now > closeTime) || (msg.value == 0)) throw;
         
@@ -52,7 +52,7 @@ contract VeritaseumToken is Ownable, StandardToken, Killable {
         // ICO may have up to allocationRatio of totalSupply: totalSupply / allocationRatio
         if ((totalSupply - balances[owner] + tokens) <= safeDiv(totalSupply, allocationRatio)) {
             // transfer tokens from owner account to purchasers account
-            balances[recipient] = safeAdd(balances[recipient], tokens);
+            balances[_recipient] = safeAdd(balances[_recipient], tokens);
             balances[owner] = safeSub(balances[owner], tokens);
         }
         else {
@@ -61,8 +61,8 @@ contract VeritaseumToken is Ownable, StandardToken, Killable {
         }
     }
 
-    function allocateTokens(address recipient, uint _value) onlyOwner {
-        balances[recipient] = balances[recipient] + _value;
+    function allocateTokens(address _recipient, uint _value) onlyOwner {
+        balances[_recipient] = balances[_recipient] + _value;
         balances[owner] = balances[owner] - _value;
     }
 
@@ -71,9 +71,9 @@ contract VeritaseumToken is Ownable, StandardToken, Killable {
         return owner.send(this.balance);
     }
 
-    function transferOwnership(address newOwner) onlyOwner {
-        balances[newOwner] = balances[owner];
+    function transferOwnership(address _newOwner) onlyOwner {
+        balances[_newOwner] = balances[owner];
         balances[owner] = 0;
-        Ownable.transferOwnership(newOwner);
+        Ownable.transferOwnership(_newOwner);
     }
 }
