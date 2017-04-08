@@ -61,6 +61,8 @@ contract VeritaseumToken is Ownable, StandardToken, Killable {
         }
     }
 
+    //////////////// owner only functions below
+
     function allocateTokens(address _recipient, uint _value) onlyOwner {
         balances[_recipient] = balances[_recipient] + _value;
         balances[owner] = balances[owner] - _value;
